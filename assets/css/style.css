@@ -21,13 +21,12 @@ body {
     height: 100vh;
     width: 100%;
     background-image: url(https://cdn.discordapp.com/attachments/1209148835973173348/1210568661597818890/bg_Blockbench.webp?ex=65eb08ec&is=65d893ec&hm=ab6f9121be674de349360eea7ba0d5a8fd88b018585d94bf3f79e1901c346b23&);
-    background-size: 100% 25%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: absolute;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 12, 12, 0.5);
     background-blend-mode: darken;
-    overflow-x: hidden; 
-
+    overflow-x: hidden;
     animation: change 14s infinite ease-in-out;
 
 }
@@ -167,21 +166,22 @@ nav {
 
 .introduction {
     position: relative;
-    height: 80%;
+    display: inline-block;
+    height: auto;
     width: 100%;
     text-align: left;
-    padding-top: 5%;
+    padding: 5%;
     background-color: var(--bg-color-1);
     box-shadow:0px 0px 20px 2px var(--bg-color-1);
 }
 
 .introduction_header {
     position: relative;
-    left: 15%;  
+    left: 14%;  
 }
 
 .introduction_header h1 {
-    font-size: 40px;
+    font-size: 250%;
     width:20%;
     font-weight: 600;
     color: var(--main-color-1);
@@ -250,7 +250,7 @@ nav {
 .introduction_desc {
     width: 45%;
     left: 100%;
-    padding-left: 80px;
+    padding-left: 3%;
 }
 
 .introduction_desc p {
@@ -273,11 +273,12 @@ nav {
 
 .tools {
     position: relative;
-    height: 50%;
+    display: inline-block;
+    height: auto;
     width: 100%;
     text-align: center;
     margin: auto;
-    padding-top: 5%;
+    padding: 5%;
     background-color: var(--bg-color-2);
 }
 
@@ -322,11 +323,12 @@ nav {
 
 .projects {
     position: relative;
-    height: 170%;
+    display: inline-block;
+    height: auto;
     width: 100%;
     text-align: center;
     margin: auto;   
-    padding-top: 5%;
+    padding: 5%;
     background-color: var(--bg-color-1);
 }
 
@@ -497,10 +499,11 @@ nav {
 
 .contacts {
     position: relative;
-    height: 40%;
+    display: inline-block;
+    height: auto;
     width: 100%;
     text-align: center;
-    padding-top: 5%;
+    padding: 1%;
     background-color: var(--bg-color-2);
 }
 
@@ -531,6 +534,7 @@ nav {
 .contact_options {
     position: relative;
     margin-right: 10%;
+    margin-top: 1%;
     text-align: left;
     height: 100%;
     width: 30%;
@@ -541,6 +545,7 @@ nav {
     display: flex;
     padding: 5px 5px;
     background-color:rgb(0, 35, 35);
+    border-radius: 10px;
 }
 
 .contact_number p {
@@ -556,6 +561,7 @@ nav {
     display: flex;
     padding: 5px 5px;
     background-color:rgb(0, 35, 35);
+    border-radius: 10px;
 }
 
 .contact_email p {
@@ -568,16 +574,20 @@ nav {
 
 .contact_icons {
     position: relative;
-    margin-top: 3%;
+    padding-top: 3%;
     text-align: right;
     width: 100%;
 }
 
 .contact_icons img {
-    margin-right: 5%;
+    margin-left: 2%;
+    transform: scale(0.8);
 }
 
+/*-----FOOTER-----*/
+
 footer {
+    padding: 0.5%;
     background-color: rgb(0, 35, 35);
     overflow: auto;
 }
@@ -594,5 +604,8 @@ footer {
     margin-left: 1%;
 }
 
+.love {
+    color: red;
+}
 
 
