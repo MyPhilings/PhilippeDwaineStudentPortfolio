@@ -206,7 +206,6 @@ nav {
     top: 10%;
 
     animation: fade-in-left ease-out both;
-    
     animation-timeline: view();
     animation-range: entry 40% cover 40%;
 }
@@ -335,7 +334,7 @@ nav {
 
     animation: fade-in-up ease-out both;
     animation-timeline: view();
-    animation-range: entry 50% cover 50%;
+    animation-range: entry 60% cover 60%;
 }
 
 .tools_icons img {
