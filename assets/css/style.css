@@ -205,7 +205,6 @@ nav {
 .profile img {
 
     border: 2px solid #fff;
-    margin-top: 5%;
     border-radius: 50%;
     height: 70%;
     width: 70%;
@@ -216,9 +215,8 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 5%;
     width: 70%;
-    height: 92%;
+    height: 99%;
     border: 2px solid #fff;
     border-radius: 50%;
     background-color: rgba(223, 92, 94, 0);
