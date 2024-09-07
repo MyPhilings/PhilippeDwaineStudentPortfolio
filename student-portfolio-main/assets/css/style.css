@@ -1,0 +1,700 @@
+:root {
+    --bg-color-1: rgb(0, 12, 12);
+    --bg-color-2: rgb(0, 20, 20);
+    --main-color-1: rgb(223, 92, 94);
+    --text-color-1: rgb(255, 170, 162);
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*-----HERO-----*/
+
+body {
+
+    height: 100vh;
+    width: 100%;
+    background-image: url('/assets/images/bg_Blockbench.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-color: rgb(0, 12, 12, 0.5);
+    background-blend-mode: darken;
+    overflow-x: hidden;
+    animation-name: change;
+    animation-duration: 14s;
+}
+
+#body {animation-timing-function: infinite ease-in-out;}
+
+@keyframes change {
+    0% {
+        background-image: url('/assets/images/bg_Blockbench.png');
+    }
+    20% {
+        background-image: url('/assets/images/bg_CSSHTML.png');
+    }
+    40% {
+        background-image: url('/assets/images/bg_GMS2.png');
+    }
+    60% {
+        background-image: url('/assets/images/bg_Java.png');
+    }
+    80% {
+        background-image: url('/assets/images/bg_MySQL.png');
+    }
+
+}
+
+.hero {    
+    position: relative;
+    left: 50%;
+    top: -20%;
+    width: 90%;
+    height: 100%;
+    transform: translate(-50%, 50%);
+    text-align: left;
+    text-shadow: 0px 2px 1px rgb(61, 0, 0);
+    
+}
+
+.hero h1 {  
+    font-weight: bold;
+    font-size: 90px;
+    color: var(--text-color-1);
+
+    animation: fade-right 1s;
+}
+
+.hero p {   
+    text-align: left;
+    color: #fff;
+    animation: fade-right 1.5s;
+}
+
+@keyframes fade-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%) scale(1);
+    }
+    100% {
+        transform: translateY(0%) scale(1);
+    }
+}
+
+/*-----NAVIGATION LOGO-----*/
+
+.header {
+    line-height: 100%;
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    z-index: 1000;
+    background: var(--bg-color-1);
+    box-shadow: 0px 5px 15px 5px var(--bg-color-1);
+
+    animation: slide-down 2s;
+}
+
+.home_logo {
+    position: relative;
+    left: 10%;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.home_logo:hover {
+    transform: scale(1.1);
+}
+
+.home_logo li a{
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+    font-weight: 900;
+    font-size: 25px;
+    color: var(--main-color-1);
+}
+
+/*-----NAVIGATION -----*/
+
+nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav-links {
+    padding: 15px 100px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 20px;
+}   
+
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 5px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: var(--main-color-1);
+}
+
+/*-----INTRODUCTION-----*/
+
+.introduction {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+    background-color: var(--bg-color-1);
+    box-shadow:0px 0px 20px 2px var(--bg-color-1);
+}
+
+.introduction_header {
+    position: relative;
+    left: 14%;  
+}
+
+.introduction_header h1 {
+    font-size: 250%;
+    width:20%;
+    font-weight: 600;
+    color: var(--main-color-1);
+    text-align: center;
+    border: 2px solid var(--main-color-1);
+    background-color: rgba(223, 92, 94, 0);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+.introduction_header h1:hover {
+    background-color: rgba(223, 92, 94, 255);
+    color: #fff;
+}
+
+.profile {
+    position: absolute;
+    left: 60%;
+    top: 10%;
+
+    animation: fade-in-left ease-out both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+.profile img {
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 120%;
+    height: 120%;
+    
+}
+
+.social_profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 98%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(223, 92, 94, 0);
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social_profile:hover {
+    background-color: rgba(223, 92, 94, 0.800);
+}
+
+.social_profile p {
+    position: absolute;
+    left: 0;
+    padding-top: 47%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0);
+
+    transition: color 0.3s ease-in-out;
+}
+
+.social_profile p:hover {
+    color: rgba(255, 255, 255, 0.800);
+}
+    
+
+.introduction_desc {
+    width: 45%;
+    left: 100%;
+    padding-left: 3%;
+}
+
+.introduction_desc p {
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    font-size: 160%;    
+    font-weight: 300;
+    line-height: 35px;
+    width: 100%;
+    padding-top: 5%;
+
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--main-color-1);
+}
+
+/*-----TOOLS-----*/
+
+.tools {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 5%;
+    background-color: var(--bg-color-2);
+}
+
+.tools h1 {
+    font-size: 40px;
+    width:15%;
+    font-weight: 600;
+    color: var(--main-color-1);
+    margin: auto;
+    text-align: center;
+    border: 2px solid var(--main-color-1);
+    background-color: var(--bg-color-2);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+.tools h1:hover {
+    background-color: rgba(223, 92, 94, 255);
+    color: #fff;
+}
+
+.tools p {
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    font-size: 150%;
+    font-weight: 300;
+    line-height: 35px;
+    padding-top: 50px;
+
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+.tools_icons {
+    width: 100%;
+    padding-top: 50px;
+    display: inline-block;
+
+    animation: fade-in-up ease-out both;
+    animation-timeline: view();
+    animation-range: entry 60% cover 60%;
+}
+
+.tools_icons img {
+    padding: 0px 20px;
+}
+
+/*-----PROJECTS-----*/
+
+.projects {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin: auto;   
+    padding: 5%;
+    background-color: var(--bg-color-1);
+}
+
+.project_header {
+    position: relative;
+    left: 16%;
+}
+
+.projects h1 {
+    font-size: 40px;
+    width:20%;
+    font-weight: 600;
+    color: var(--main-color-1);
+    text-align: center;
+    border: 2px solid var(--main-color-1);
+    background-color: rgba(223, 92, 94, 0);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+.projects h1:hover {
+    background-color: rgba(223, 92, 94, 255);
+    color: #fff;
+}
+
+.projects_desc {
+    width: 45%;
+    left: 100%;
+    padding-left: 7%;
+}
+
+.projects_desc p {
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    font-size: 150%;
+    font-weight: 300;
+    line-height: 35px;  
+    padding-top: 50px;
+
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+.project_cards {
+    display: inline-block;
+}
+
+/*Left*/
+.column_left {
+    display: flex;
+    position: relative;
+    left: 3%;
+    width: 40%;
+    margin-top: 20px;
+    flex-direction: column;
+    float: left;
+
+    animation: fade-in-right ease-out both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 30%;
+}
+
+.column_left a {
+    position: relative;
+    text-decoration: none;
+}
+
+.project_row_left {
+    position: relative;
+    background-color: rgb(0, 17, 17);
+    border-radius: 10px;
+    border: 2px solid var(--main-color-1);
+    border-radius: 5px;
+    margin-top: 5%;
+    color: #fff;
+    overflow: hidden;
+}
+
+.project_row_left p {
+    position: relative;
+    padding: 2% 0;
+    margin-bottom: 10px;
+    left: 4%;
+    width: 90%;
+}
+
+.project_row_left img {
+    position: relative;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+}
+
+.project_row_left::after {
+    content: 'View Project >';
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: rgba(223, 92, 94, 0.800);
+    position: absolute;
+
+    transition: 0.5s;
+}
+
+.project_row_left:hover::after {
+    top: 0;
+    padding-top: 30%;
+}
+
+/*Right*/
+.column_right {
+    display: flex;
+    position: relative;
+    left: -8%;
+    width: 40%;
+    margin-top: -12%;
+    flex-direction: column;
+    float: right;
+
+    animation: fade-in-left ease-out both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 30%;
+}
+
+.column_right a {
+    position: relative;
+    text-decoration: none;
+}
+
+.project_row_right {
+    position: relative;
+    background-color: rgb(0, 22, 22);
+    border-radius: 5px;
+    border: 2px solid var(--main-color-1);
+    margin-top: 5%;
+    color: #fff;
+    overflow: hidden;
+}
+.project_row_right p {
+    position: relative;
+    padding: 2% 0;
+    margin-bottom: 10px;
+    left: 4%;
+    width: 90%;
+}
+
+.project_row_right img {
+    position: relative;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+}
+
+.project_row_right::after {
+    content: 'View Project >';
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: rgba(223, 92, 94, 0.800);
+    position: absolute;
+
+    transition: 0.5s;
+}
+
+.project_row_right:hover::after {
+    top: 0;
+    padding-top: 30%;
+}
+
+/*-----CONTACTS-----*/
+
+.contacts {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+    background-color: var(--bg-color-2);
+}
+
+.contact_desc {
+    position: relative;
+    margin-left: 10%;
+    text-align: left;
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+
+.contact_desc h1 {
+    font-size: 40px;
+    width: 100%;
+    font-weight: 600;
+    color: var(--main-color-1);
+}
+
+.contact_desc p {
+    margin: auto;
+    color: #fff;
+    font-size: 150%;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+.contact_options {
+    position: relative;
+    margin-right: 10%;
+    margin-top: 1%;
+    text-align: left;
+    height: 100%;
+    width: 30%;
+    float: right;
+}
+
+.contact_number {
+    display: flex;
+    padding: 5px 5px;
+    background-color:rgb(0, 35, 35);
+    border-radius: 10px;
+}
+
+.contact_number p {
+    margin-left: 3%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+.contact_email {
+    margin-top: 50px;
+    display: flex;
+    padding: 5px 5px;
+    background-color:rgb(0, 35, 35);
+    border-radius: 10px;
+}
+
+.contact_email p {
+    margin-left: 3%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+.contact_icons {
+    position: relative;
+    padding-top: 3%;
+    text-align: right;
+    width: 100%;
+}
+
+.contact_icons img {
+    margin-left: 2%;
+    transform: scale(0.8);
+}
+
+/*-----FOOTER-----*/
+
+footer {
+    padding: 0.5%;
+    background-color: rgb(0, 35, 35);
+    overflow: auto;
+}
+
+.icons8 {
+    float: right;
+    color: #fff;
+    margin-right: 1%;
+}
+
+.copyright {
+    float: left;
+    color: #fff;
+    margin-left: 1%;
+}
+
+.love {
+    color: red;
+}
+
+/*-----SCROLL ANIMATION-----*/
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
