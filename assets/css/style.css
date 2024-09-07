@@ -20,32 +20,34 @@ body {
 
     height: 100vh;
     width: 100%;
-    background-image: url(https://cdn.discordapp.com/attachments/1209148835973173348/1210568661597818890/bg_Blockbench.webp?ex=65eb08ec&is=65d893ec&hm=ab6f9121be674de349360eea7ba0d5a8fd88b018585d94bf3f79e1901c346b23&);
+    background-image: url('/assets/images/bg_Blockbench.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: absolute;
     background-color: rgb(0, 12, 12, 0.5);
     background-blend-mode: darken;
     overflow-x: hidden;
-    animation: change 14s infinite ease-in-out;
-
+    animation-name: change;
+    animation-duration: 14s;
 }
+
+#body {animation-timing-function: infinite ease-in-out;}
 
 @keyframes change {
     0% {
-        background-image: url(https://cdn.discordapp.com/attachments/1209148835973173348/1210568661597818890/bg_Blockbench.webp?ex=65eb08ec&is=65d893ec&hm=ab6f9121be674de349360eea7ba0d5a8fd88b018585d94bf3f79e1901c346b23&);
+        background-image: url('/assets/images/bg_Blockbench.png');
     }
     20% {
-        background-image: url(https://cdn.discordapp.com/attachments/1209148835973173348/1210568662772093008/bg_GMS2.webp?ex=65eb08ec&is=65d893ec&hm=839a0be56008e11d505c5eca355bb9f0163dfd748ab06bdcd4f18f9ebf2be130&);
+        background-image: url('/assets/images/bg_CSSHTML.png');
     }
     40% {
-        background-image: url(https://cdn.discordapp.com/attachments/1209148835973173348/1210568663296376872/bg_Java.webp?ex=65eb08ec&is=65d893ec&hm=3566dff06df70a7d0accb44a136126ab8e79b2b03b18e5bd009a93c501f68d95&);
+        background-image: url('/assets/images/bg_GMS2.png');
     }
     60% {
-        background-image: url(https://cdn.discordapp.com/attachments/1209148835973173348/1210568663690772480/bg_MySQL.webp?ex=65eb08ec&is=65d893ec&hm=1fe41f33680b5af06412d062d1cad9daf5d5f47a0e8dfb19e093bcb911344eb0&);
+        background-image: url('/assets/images/bg_Java.png');
     }
     80% {
-        background-image: url(https://cdn.discordapp.com/attachments/1209148835973173348/1210568662235488296/bg_CSSHTML.webp?ex=65eb08ec&is=65d893ec&hm=74a0b9200191c49e662f9b711ee0ed0c224740a094ec2235824fd33a5f23ea22&);
+        background-image: url('/assets/images/bg_MySQL.png');
     }
 
 }
@@ -214,8 +216,8 @@ nav {
 
     border: 2px solid #fff;
     border-radius: 50%;
-    height: 70%;
-    width: 70%;
+    width: 120%;
+    height: 120%;
     
 }
 
@@ -223,8 +225,8 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
-    height: 99%;
+    width: 120%;
+    height: 98%;
     border: 2px solid #fff;
     border-radius: 50%;
     background-color: rgba(223, 92, 94, 0);
@@ -424,8 +426,6 @@ nav {
 }
 
 .project_row_left {
-    width: 110%;
-    height: 110%;
     position: relative;
     background-color: rgb(0, 17, 17);
     border-radius: 10px;
@@ -490,8 +490,6 @@ nav {
 }
 
 .project_row_right {
-    width: 110%;
-    height: 110%;
     position: relative;
     background-color: rgb(0, 22, 22);
     border-radius: 5px;
